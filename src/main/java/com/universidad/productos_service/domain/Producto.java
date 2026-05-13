@@ -1,10 +1,8 @@
 package com.universidad.productos_service.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity
-@Data
 public class Producto {
 
     @Id
@@ -14,6 +12,19 @@ public class Producto {
     private String nombre;       // Bug: sin @Column(nullable=false)
     private Double precio;
     private Integer stock;
+
+    // Getters y Setters manuales (sin Lombok)
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public Double getPrecio() { return precio; }
+    public void setPrecio(Double precio) { this.precio = precio; }
+
+    public Integer getStock() { return stock; }
+    public void setStock(Integer stock) { this.stock = stock; }
 
     // Code Smell: lógica de negocio en entidad JPA
     public String getEstado() {
