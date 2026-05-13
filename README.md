@@ -16,7 +16,7 @@ docker run -d --name sonarqube -p 9000:9000 -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE
 mvn clean verify
 
 # 3. Enviar análisis a SonarQube
-mvn sonar:sonar "-Dsonar.token=TU_TOKEN" "-Dsonar.host.url=http://127.0.0.1:9000"
+mvn sonar:sonar "-Dsonar.token=sqa_26fd636984bec37f8855d2c3f837993d5cf72b6a" "-Dsonar.host.url=http://127.0.0.1:9000"
 ```
 
 ## Estado inicial del análisis
